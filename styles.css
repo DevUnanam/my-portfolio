@@ -1,0 +1,26 @@
+.bg-blue{
+    background-color: rgb(96, 163, 189);
+}
+
+.bg-black {
+    background-color: black; 
+}
+
+
+#hero {
+    padding-top: 100px;
+}
+
+.service-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .service-box {
+        margin-bottom: 30px;
+    }
+}
