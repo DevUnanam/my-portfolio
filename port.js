@@ -20,4 +20,18 @@ $(document).ready(function(){
     });
 });
 
-
+document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        const top = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight * 0.75) {
+          section.classList.add('visible');
+        } else {
+          section.classList.remove('visible');
+        }
+      });
+    });
+  });
+  

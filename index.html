@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
 
     <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <title>DevUnanam's portfolio</title>
    
 </head>
-    <body class="bg-green">
+    <body class="bg-light">
         <nav class="navbar navbar-expand-lg navbar-dark bg-black">
             <div class="container">
                 <a class="navbar-brand" href="#">DEV UNANAM</a>
@@ -44,12 +45,12 @@
         </nav>
 
         <section id="hero" class="container-fluid">
-            <div class="row">
+            <div class="row" data-aos="fade-in">
                 
                 <div class="col-lg-6 col-md-8 col-sm-10 mx-auto">
                     <div class="row align-items-center">
                         <div class="col-lg-6 col-md-6 col-sm-12">
-                            <img src="icon/shot4.png" class="img-fluid" alt="Your Image">
+                            <img src="icon/shot5.png" class="img-fluid" alt="Your Image">
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                                 <h1>ABOUT ME</h1>
@@ -70,10 +71,10 @@
 
         <section id="portfolio" class="container-fluid bg-black py-5">
             <div class="container">
-                <h2 class="text-center mb-4">My Projects</h2>
+                <div data-aos="zoom-in-down"><h2 class="text-center mb-4">My Projects</h2></div>
                 <div class="row">
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card">
+                        <div class="card" data-aos="zoom-in-up">
                             <a href="https://movieapp-orpin.vercel.app/">
                                 <img src="icon/prev1.png" class="card-img-top" alt="FigFlix preview">
                             </a>
@@ -90,8 +91,8 @@
 
         <section id="services" class="container-fluid bg-light py-5">
             <div class="container">
-                <h2 class="text-center mb-4">My Services</h2>
-                <div class="row">
+                <div data-aos="fade-down"><h2 class="text-center mb-4">My Services</h2></div>
+                <div class="row" data-aos="zoom-in-up">
                     <div class="col-md-4 mb-4">
                         <div class="service-box">
                             <h3>Testing and Quality Assurance</h3>
@@ -134,8 +135,8 @@
 
         <section id="experiences" class="container-fluid bg-light py-5">
             <div class="container">
-                <h2 class="text-center mb-4">Experiences</h2>
-                <div class="row">
+                <div data-aos="fade-down"><h2 class="text-center mb-4">Experiences</h2></div>
+                <div class="row" data-aos="zoom-in-up">
                     <div class="col-lg-4 col-md-6 mb-4">
                         <div class="experience-box text-center p-4">
                             <i class="fab fa-cuttlefish fa-3x mb-3"></i>
@@ -212,11 +213,51 @@
                 </div>
             </div>
         </section>
+
+        <section id="contact" class="container-fluid bg-light py-5">
+            <div class="container">
+                <div data-aos="fade-down"><h2 class="text-center mb-4">Contact Me</h2></div>
+                <div class="row" data-aos="zoom-in-up">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="contact-form">
+                            <form>
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+                AOS.init({
+                offset: 300,
+                duration: 1400,
+                });
+            </script>
         <script src="port.js"></script>
     </body>
 </html>
