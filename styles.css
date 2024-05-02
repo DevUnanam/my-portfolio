@@ -1,12 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 .bg-light{
-    background-color: white(8, 129, 63);
+    background-color: white;
 }
 
 .bg-black {
-    background-color: black; 
+    background-color: #22282f; 
 }
 
+#portfolio,
+#hero,
+#services,
+#experiences,
+#contact {
+    border: 7px solid #22282f;
+    border-left: none;
+    border-right: none;
+    box-shadow: 0 0 20px #22282f;
+    margin-top: 20px;
+}
 
 #hero {
     padding-top: 100px;
