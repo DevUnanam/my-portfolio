@@ -214,43 +214,52 @@
             </div>
         </section>
 
+        <!-- contact form section-->
         <section id="contact" class="container-fluid bg-light py-5">
             <div class="container">
                 <div data-aos="fade-down"><h2 class="text-center mb-4">Contact Me</h2></div>
                 <div class="row" data-aos="zoom-in-up">
                     <div class="col-md-8 offset-md-2">
                         <div class="contact-form">
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email address">
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone Number</label>
-                                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
-                                </div>
-                                <div class="form-group">
-                                    <label for="message">Message</label>
-                                    <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
+                                <form name="submit-to-google-sheet">
+                                    <input type="text" name="name" class="form-control"  placeholder="Enter your name" autocomplete="name" required>
+                                    <input type="email" name="email" class="form-control"  placeholder="Enter your email address" autocomplete="email" required>
+                                    <textarea class="form-control" name="message"  rows="5" placeholder="Enter your message" autocomplete="message"></textarea>
+                                    <input type="submit" name="" value="send message" class="btn btn-primary">
+                                </form>
+                            <!-- submission message-->
+                            <span id="msg"></span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-        
 
+        <footer>
+            <div class="footer">
+              <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                  <div class="copyright">
+                    <p>&copy;2024. Coded by UnanamVictoria <strong>Unanam<span>Victoria</span></strong></p>
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                  <a href="#home" class="scroll-top"><i class="ri-arrow-up-s-fill"></i></a>
+                </div>
+              </div>
+            </div>
+          </footer>
+          
+        
+        
+<!-- section for majority of the javascript codes-->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+<!-- responsible for the scrolling effect-->
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
             <script>
                 AOS.init({
@@ -259,5 +268,24 @@
                 });
             </script>
         <script src="port.js"></script>
+<!-- contact form submission section-->
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyhEHWkp8E7cqAEwfjddrtRxA7h3haxlfe0RI9lZABMZt0mrc77JeeGlMMl0Y8uYNr_/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
     </body>
 </html>
