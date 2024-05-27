@@ -34,4 +34,12 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+
+  gsap.from("nav ul li button", {
+    opacity: 0,
+    y: -50,
+    stagger: 0.1,
+    duration: 1,
+    ease: "power2.out"
+});
   

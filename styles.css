@@ -1,124 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
-.bg-light{
-    background-color: white;
-}
+
 
 .bg-black {
-    background-color: #22282f; 
+    background-color: #050505; 
 }
 
-#portfolio,
-#hero,
-#services,
-#experiences,
-#contact {
-    border: 7px solid #22282f;
-    border-left: none;
-    border-right: none;
-    box-shadow: 0 0 20px #22282f;
-    margin-top: 20px;
+.navbar-nav {
+  width: 100%;
+  justify-content: space-between;
 }
 
-.row img {
-    height: auto;
-    width: 100%;
-    border-radius: 28px;
-    margin-bottom: 1.4rem;
-  }
+.rounded-image {
+  border-radius: 40%;
   
-  
-  .card {
-    background: #c3cad5;
-    border-radius: 28px;
-    border: 1px solid transparent;
-    box-shadow: 0 0 5px #22282f;
-    padding: 20px;
-    transition: all .50s ease;
-  }
-  
-  .card-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0.5rem;
-    background: #fff;
-    border-radius: 28px;
-  }
-  
-  .card:hover {
-    border: 1px solid #22282f;
-    transform: translateY(-5px) scale(1.03);
-    cursor: pointer;
-  }
-
-  .contact-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 4.2rem;
-  }
-  
-  .contact-form form {
-    position: relative;
-    width: 600px;
-  }
-  
-  form input,
-  form textarea {
-    width: 100%;
-    padding: 20px;
-    border: none;
-    outline: none;
-    box-shadow: 0 0 5px #1b1f24;
-    background: #fff;
-    color: #22282f;
-    margin-bottom: 20px;
-    border-radius: 8px;
-  }
-  
-  form input::placeholder
-  form textarea::placeholder {
-    color: #c3cad5;
-    font-size: 15
-  }
-
-#hero {
-    padding-top: 100px;
 }
 
+.service-box{
+  border-radius: 4%;
+}
 .service-box {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  background-color: #a29bfe;
+  padding: 20px;
+  text-align: center;
+  height: 100%;
 }
 
-.experience-box {
-    text-align: center;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 20px;
+.nav-link{
+  font-weight: bolder;
 }
 
-/* Define the initial state of the sections */
-section {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-  
-  /* Define the state when the section is visible */
-  section.visible {
-    opacity: 1;
-  }
+.tig{
+  text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    font-size: 3rem;
+    padding:.5rem 2rem;
+    color:var(--black);
+    
+    border:var(--border);
+}
 
-  #msg {
-    color: #61b752;
-    margin-top: -40px;
-  }
+.about-section {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
+}
+.about-content {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.portfolio-item {
+  height: 100%;
+}
+.portfolio-item .card {
+  height: 100%;
+}
+.portfolio-item .card-img-top {
+  height: 200px; /* Set desired height for the image */
+  object-fit: cover; /* Ensure the image covers the specified height */
+}
+
+
 
 
 
