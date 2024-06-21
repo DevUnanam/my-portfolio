@@ -72,6 +72,24 @@
   object-fit: cover; /* Ensure the image covers the specified height */
 }
 
+/* Add these styles to your styles.css */
+.btn i {
+  font-size: 1.5em; /* Adjust the size of the icons */
+  vertical-align: middle; /* Center the icons vertically */
+  margin-right: 0; /* Remove any margin */
+  color: white; /* Ensure the icons are white */
+}
+
+.btn {
+  display: inline-flex; /* Use inline-flex to keep them in one line */
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* Adjust width as needed */
+  height: 50px; /* Adjust height as needed */
+  border-radius: 50%; /* Make the buttons circular */
+}
+
+
 
 
 
